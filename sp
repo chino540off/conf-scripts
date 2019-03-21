@@ -116,7 +116,9 @@ function sp-current {
   sp-metadata \
     | grep --color=never -E "(title)|(artist)" \
     | sed 's/^\(.*|\)//' \
-    | paste -sd "#" | sed 's/#/ - /'
+    | paste -sd "#" | sed 's/#/ - /' \
+    | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' \
+    | cut -c1-64
 }
 
 function sp-eval {

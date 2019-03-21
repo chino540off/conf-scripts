@@ -6,6 +6,8 @@ $(_m)-dirs =	\
 $(_m)-dir-bin	= ~/local/bin
 
 $(_m)-links =	\
-	sp
+	sp \
+	pb
 
 $(_m)-link-sp	= ~/local/bin/sp
+$(_m)-link-pb	= ~/local/bin/pb
